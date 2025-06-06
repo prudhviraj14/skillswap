@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skill Swap - Register</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+    
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+      }
+    
+      body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #89f7fe, #66a6ff);
+        animation: gradientShift 10s ease infinite alternate;
+      }
+    
+      @keyframes gradientShift {
+        0% {
+          background: linear-gradient(135deg, #89f7fe, #66a6ff);
+        }
+        100% {
+          background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+        }
+      }
+    
+      .container {
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 20px;
+        padding: 40px;
+        width: 100%;
+        max-width: 420px;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        animation: fadeIn 1s ease;
+      }
+    
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-15px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    
+      h1 {
+        font-size: 2.2rem;
+        color: #fff;
+        margin-bottom: 25px;
+        font-weight: 600;
+      }
+    
+      .form-group {
+        margin-bottom: 20px;
+        text-align: left;
+      }
+    
+      .form-group label {
+        color: #fff;
+        font-weight: 300;
+        font-size: 0.95rem;
+        display: block;
+        margin-bottom: 5px;
+      }
+    
+      .form-group input {
+        width: 100%;
+        padding: 12px;
+        border-radius: 10px;
+        border: none;
+        font-size: 1rem;
+        background: rgba(255, 255, 255, 0.85);
+        color: #333;
+        transition: box-shadow 0.3s ease;
+      }
+    
+      .form-group input:focus {
+        outline: none;
+        box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+      }
+    
+      #submit {
+        background: linear-gradient(135deg, #4facfe, #00f2fe);
+        color: white;
+        padding: 14px;
+        width: 100%;
+        border: none;
+        font-size: 1rem;
+        font-weight: bold;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: transform 0.2s, box-shadow 0.3s ease;
+      }
+    
+      #submit:hover {
+        transform: scale(1.03);
+        box-shadow: 0 8px 15px rgba(0, 123, 255, 0.3);
+      }
+    
+      .link {
+        margin-top: 15px;
+        color: #fff;
+        font-size: 0.9rem;
+      }
+    
+      .link a {
+        color: #e0f0ff;
+        text-decoration: none;
+        font-weight: 500;
+      }
+    
+      .link a:hover {
+        text-decoration: underline;
+        color: #ffffff;
+      }
+    </style>
+    
+  </head>
+  <body>
+    <div class="container">
+      <h1>Join Skill Swap</h1>
+      <form action="register.php" id="register-form" method="POST">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <div class="form-group">
+          <label for="mobile">Mobile Number</label>
+          <input type="text" id="mobile" name="mobile" required />
+        </div>
+        <div class="form-group">
+          <label for="skills">Skills</label>
+          <input type="text" id="skills" name="skills" required />
+        </div>
+        <div class="form-group">
+          <label for="experience">Experience (Years)</label>
+          <input type="text" id="experience" name="experience" required />
+        </div>
+        <div class="form-group">
+          <label for="dob">Date of Birth</label>
+          <input type="date" id="dob" name="dob" required />
+        </div>
+        <input type="submit" value="Sign Up" name="submit" id="submit" />
+      </form>
+      <div class="link">
+        <p>Already have an account? <a href="login.html">Login</a></p>
+      </div>
+    </div>
+  </body>
+</html>
